@@ -148,6 +148,172 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/%E5%A4%A7%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hu">
+      <meta itemprop="description" content="Note for Hu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/09/%E5%A4%A7%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-09-09 14:44:55 / Modified: 16:30:22" itemprop="dateCreated datePublished" datetime="2021-09-09T14:44:55+08:00">2021-09-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.kuangstudy.com/bbs/1351463043300708353">飞哥讲大前端</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/">nodejs</a></li>
+<li>淘宝镜像：<a target="_blank" rel="noopener" href="http://npm.taobao.org/">http://npm.taobao.org/</a>       npm官方：<a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com/</a></li>
+<li></li>
+</ol>
+<h2 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h2><h3 id="var-let-const"><a href="#var-let-const" class="headerlink" title="var,let,const"></a>var,let,const</h3><p>var 最原始，会造成   <strong>常量可以修改，变量穿透</strong></p>
+<p>let 可变变量</p>
+<p>const 常量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const PI = Math.PI;</span><br><span class="line">// 修改会报错</span><br><span class="line">//PI = 1245;</span><br><span class="line">console.log(PI)</span><br><span class="line"></span><br><span class="line">//var或造成变量穿透</span><br><span class="line">for(let i=0;i&lt;5;i++)&#123;</span><br><span class="line">	console.log(i);</span><br><span class="line">&#125;;</span><br><span class="line">//console.log(&quot;===这里就是变量穿透===&gt;&quot; + i)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h3><p>现在用反引号：``</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;hu&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hell<span class="subst">$&#123;name&#125;</span>`</span>)<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数默认参数与箭头函数"><a href="#函数默认参数与箭头函数" class="headerlink" title="函数默认参数与箭头函数"></a>函数默认参数与箭头函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// 默认参数 给参数列表设定初始值</span><br><span class="line">function add(a =100,b=100) &#123;</span><br><span class="line">	console.log(a,b);    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1:声明式的定义</span><br><span class="line">function add ()&#123;</span><br><span class="line">&#125;;</span><br><span class="line">// 2:表达式的定义</span><br><span class="line">var add2 = function()&#123;</span><br><span class="line">&#125;     </span><br><span class="line"> // 3:箭头函数的定义</span><br><span class="line"> var sum = (a = 100,b = 300)=&gt;&#123;</span><br><span class="line"> 	console.log(a+b);</span><br><span class="line"> &#125;;</span><br><span class="line"> </span><br><span class="line"> // 箭头函数</span><br><span class="line"> // 它也是一种函数的定义，它简化定义仅此而已。</span><br><span class="line"> // 步骤：1：去掉function  2: 括号后面加箭头。</span><br><span class="line"> </span><br><span class="line"> // 3:有参数</span><br><span class="line"> // 只有一个参数，参数的括号可写可不写，当有多个参数，括号一定要加上</span><br><span class="line"> // 4:逻辑体</span><br><span class="line"> // 如果没有逻辑体只有返回值，可以去掉return和逻辑体的括号，</span><br><span class="line"> </span><br><span class="line">// 箭头改造如下</span><br><span class="line">var sum4 = (a,b)=&gt;a+b</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="对象简写"><a href="#对象简写" class="headerlink" title="对象简写"></a>对象简写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> &#123;name,age&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">  name:&#x27;zhangsan&#x27;,</span><br><span class="line">  age:32,</span><br><span class="line">  language:&quot;cn&quot;,</span><br><span class="line">  // 函数也有处理</span><br><span class="line">  say:function()&#123;</span><br><span class="line">    console.log(this.name+&quot;年龄是：&quot; + this.age);</span><br><span class="line">  &#125;   </span><br><span class="line">  say:()=&gt;&#123;</span><br><span class="line">    console.log(this.name+&quot;年龄是：&quot; + this.age);</span><br><span class="line">  &#125;  </span><br><span class="line">  say()&#123;</span><br><span class="line">    console.log(this.name+&quot;年龄是：&quot; + this.age);</span><br><span class="line">	&#125; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 可以用冒号取小名</span><br><span class="line">var &#123;name,age,language:lan,say&#125; = person;</span><br><span class="line">console.log(lan)</span><br><span class="line">console.log(say())</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="传播操作符"><a href="#传播操作符" class="headerlink" title="传播操作符"></a>传播操作符</h3><p>把一个对象的属性传播到另外一个对象中，使用…</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 1： 定义一个对象</span><br><span class="line">var person1 = &#123;</span><br><span class="line">  name: &#x27;小飞飞&#x27;,</span><br><span class="line">  age: 16,</span><br><span class="line">&#125;;</span><br><span class="line">// 2： 对象解构</span><br><span class="line">var &#123;name,age&#125; = person1;</span><br><span class="line">// =========================== ... 对象融合=====================</span><br><span class="line">var person2 = &#123;</span><br><span class="line">  ...person1,</span><br><span class="line">  gender:1,</span><br><span class="line">  tel:13478900</span><br><span class="line">&#125;;</span><br><span class="line">console.log(person2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// =========================== ... 对象取值=====================</span><br><span class="line">var person3 = &#123;</span><br><span class="line">  name:&quot;李四&quot;,</span><br><span class="line">  gender:1,</span><br><span class="line">  tel:&quot;11111&quot;,</span><br><span class="line">  address:&#x27;广州&#x27;</span><br><span class="line">&#125;;</span><br><span class="line">// ...person4 把剩下没取走给我。</span><br><span class="line">var &#123;name,gender,...person4&#125; = person3;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数组map和reduce"><a href="#数组map和reduce" class="headerlink" title="数组map和reduce"></a>数组map和reduce</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/*********************************map*********************/</span></span><br><span class="line">  <span class="keyword">let</span> arr = [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;-5&#x27;</span>, <span class="string">&#x27;3&#x27;</span>];</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="comment">// 1:数据类型的更改 map自身循环的功能</span></span><br><span class="line">  <span class="comment">// 2:map方法可以将原数组中的所有元素通过一个函数进行处理并放入到一个新数组中并返回该新数组。</span></span><br><span class="line">  <span class="keyword">var</span> newarr = arr.map(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  		<span class="keyword">return</span> <span class="built_in">parseInt</span>(value) * <span class="number">2</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">  // 箭头简化01</span></span><br><span class="line"><span class="comment">  var newarr = arr.map(value=&gt;&#123;</span></span><br><span class="line"><span class="comment">  		return parseInt(value) * 2;</span></span><br><span class="line"><span class="comment">  &#125;);</span></span><br><span class="line"><span class="comment">  // 箭头简化02</span></span><br><span class="line"><span class="comment">  var newarr = arr.map(value =&gt; parseInt(value) * 2);</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;原数组：&quot;</span>, arr);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;map的newarr数组：&quot;</span>, newarr); <span class="comment">// 2 40 -10 6</span></span><br><span class="line">  <span class="comment">/*********************************end map*********************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">/*********************************reduce*********************/</span></span><br><span class="line"><span class="comment">//reduce 计算方法</span></span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>];</span><br><span class="line"><span class="keyword">var</span> result = arr2.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="comment">/*********************************end reduce*********************/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第一个参数是上一次reduce处理的结果</li>
+<li>第二个参数是数组中要处理的下一个元素<br>reduce() 会从左到右依次把数组中的元素用reduce处理，并把处理的结果作为下次reduce的第一个参数。如果是 第一次，会把前两个元素作为计算参数，或者把用户指定的初始值作为起始参数</li>
+</ul>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">npm init -y #初始化项目</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm config set registry https://registry.npm.taobao.org   # 设置淘宝镜像</span><br><span class="line">npm config list   # 查看npm配置信息</span><br><span class="line"></span><br><span class="line">npm install --save-dev eslint # 安装</span><br><span class="line">#一些命令行工具常使用全局安装的方式</span><br><span class="line">npm install -g webpack</span><br><span class="line"></span><br><span class="line">#更新包（更新到最新版本）</span><br><span class="line">npm update 包名</span><br><span class="line">#全局更新</span><br><span class="line">npm update -g 包名</span><br><span class="line">#卸载包</span><br><span class="line">npm uninstall 包名</span><br><span class="line">#全局卸载</span><br><span class="line">npm uninstall -g 包名</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h2><p>ES6的某些高级语法在浏览器环境甚至是Node.js环境中无法执行。</p>
+<p>Babel是一个广泛使用的转码器，可以将ES6代码转为ES5代码，从而在现有环境执行执行。</p>
+<p>这意味着，你可以现在就用 ES6 编写程序，而不用担心现有环境是否支持。</p>
+<p>安装命令行转码工具</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g babel-cli</span><br><span class="line">#查看是否安装成功</span><br><span class="line">babel --version</span><br></pre></td></tr></table></figure>
+
+<p>配置 .babelrc</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;presets&quot;</span>: [<span class="string">&quot;es2015&quot;</span>],  # presets字段设定转码规则，将es2015规则加入 .babelrc：</span><br><span class="line">    <span class="string">&quot;plugins&quot;</span>: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>安装转码器，在项目中安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev babel-preset-es2015    </span><br></pre></td></tr></table></figure>
+
+<p>转码  **babel src -d dist **</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># npm install --save-dev csv-loader xml-loader</span><br><span class="line"># 转码结果写入一个文件</span><br><span class="line">mkdir dist1</span><br><span class="line"># --out-file 或 -o 参数指定输出文件</span><br><span class="line">babel src/example.js --out-file dist1/compiled.js</span><br><span class="line"># 或者</span><br><span class="line">babel src/example.js -o dist1/compiled.js</span><br><span class="line"># 整个目录转码</span><br><span class="line">mkdir dist2</span><br><span class="line"># --out-dir 或 -d 参数指定输出目录</span><br><span class="line">babel src --out-dir dist2</span><br><span class="line"># 或者</span><br><span class="line">babel src -d dist2</span><br></pre></td></tr></table></figure>
+
+<p>自定义脚本</p>
+<ol>
+<li>改写package.json</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // ...</span><br><span class="line">    &quot;scripts&quot;: &#123;</span><br><span class="line">        // ...</span><br><span class="line">        &quot;build&quot;:  &quot;babel src\\example.js -o dist\\compiled.js&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>转码的时候，执行下面的命令</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir dist</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p><strong>模块化产生的背景</strong></p>
+<p>随着网站逐渐变成”互联网应用程序”，嵌入网页的Javascript代码越来越庞大，越来越复杂。</p>
+<p>Javascript模块化编程，已经成为一个迫切的需求。理想情况下，开发者只需要实现核心的业务逻辑，其他都可以加载别人已经写好的模块。但是，Javascript不是一种模块化编程语言，它不支持”类”（class），包（package）等概念，也不支持”模块”（module）</p>
+<p><strong>模块化规范</strong></p>
+<ul>
+<li>CommonJS模块化规范</li>
+<li>ES6模块化规范</li>
+</ul>
+<h3 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 1.新建四则运算js，定义成员：</span><br><span class="line">const sum = function(a,b)&#123;</span><br><span class="line">    return a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 2.导出成员： --------</span><br><span class="line">module.exports = &#123;</span><br><span class="line">    sum: sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//简写</span><br><span class="line">module.exports = &#123;</span><br><span class="line">    sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//3.引入模块，注意：当前路径必须写 ./</span><br><span class="line">const m = require(&#x27;./四则运算.js&#x27;)</span><br><span class="line">console.log(m)</span><br><span class="line">const r1 = m.sum(1,2)</span><br></pre></td></tr></table></figure>
+
+<p><strong>CommonJS使用 module.exports 和require 来导出、导入模块。</strong></p>
+<h3 id="ES6模块化规范"><a href="#ES6模块化规范" class="headerlink" title="ES6模块化规范"></a>ES6模块化规范</h3><p><strong>ES6使用 export 和 import 来导出、导入模块。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">export function getList() &#123;</span><br><span class="line">    console.log(&#x27;获取数据列表&#x27;)</span><br><span class="line">&#125;</span><br><span class="line">export function save() &#123;</span><br><span class="line">    console.log(&#x27;保存数据&#x27;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//只取需要的方法即可，多个方法用逗号分隔</span><br><span class="line">import &#123; getList, save &#125; from &#x27;./userApi.js&#x27;</span><br><span class="line">getList()</span><br><span class="line">save()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意：这时的程序无法运行的，因为ES6的模块化无法在Node.js中执行，需要用Babel编辑成ES5后再执行。</strong></p>
+</blockquote>
+<p>写法2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;</span><br><span class="line">    getList() &#123;</span><br><span class="line">        console.log(&#x27;获取数据列表2&#x27;)</span><br><span class="line">    &#125;,</span><br><span class="line">    save() &#123;</span><br><span class="line">        console.log(&#x27;保存数据2&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">import user from &quot;./userApi2.js&quot;</span><br><span class="line">user.getList()</span><br><span class="line">user.save()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Webpack打包"><a href="#Webpack打包" class="headerlink" title="Webpack打包"></a>Webpack打包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g webpack webpack-cli  </span><br><span class="line">webpack -v </span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -173,7 +339,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-09-09 09:00:35 / Modified: 13:45:18" itemprop="dateCreated datePublished" datetime="2021-09-09T09:00:35+08:00">2021-09-09</time>
+              <time title="Created: 2021-09-09 09:00:35 / Modified: 14:44:34" itemprop="dateCreated datePublished" datetime="2021-09-09T09:00:35+08:00">2021-09-09</time>
             </span>
 
           
@@ -259,10 +425,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-08-11 10:15:27 / Modified: 10:26:41" itemprop="dateCreated datePublished" datetime="2021-08-11T10:15:27+08:00">2021-08-11</time>
+              <time title="Created: 2021-08-11 10:15:27" itemprop="dateCreated datePublished" datetime="2021-08-11T10:15:27+08:00">2021-08-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-09-09 14:44:19" itemprop="dateModified" datetime="2021-09-09T14:44:19+08:00">2021-09-09</time>
+              </span>
 
           
 
@@ -281,7 +453,7 @@
 <li><p>安装python<br>安装完成之后使用命令<code>brew install python3</code> 安装最新的python版本，默认会安装到这个目录下/usr/local/Cellar/</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -e .bash_profile</span><br></pre></td></tr></table></figure>
 
-<p>增加环境变量：<br>PATH=”/usr/local/Cellar/<a href="mailto:&#112;&#121;&#x74;&#104;&#111;&#110;&#64;&#51;&#46;&#57;">&#112;&#121;&#x74;&#104;&#111;&#110;&#64;&#51;&#46;&#57;</a>/3.9.6/bin:${PATH}”<br>export PATH<br>alias python=”/usr/local/Cellar/<a href="mailto:&#x70;&#121;&#x74;&#104;&#111;&#x6e;&#x40;&#x33;&#x2e;&#x39;">&#x70;&#121;&#x74;&#104;&#111;&#x6e;&#x40;&#x33;&#x2e;&#x39;</a>/3.9.6/Frameworks/Python.framework/Versions/3.9/bin/python3.9”</p>
+<p>增加环境变量：<br>PATH=”/usr/local/Cellar/<a href="mailto:&#x70;&#x79;&#116;&#x68;&#111;&#110;&#64;&#x33;&#x2e;&#57;">&#x70;&#x79;&#116;&#x68;&#111;&#110;&#64;&#x33;&#x2e;&#57;</a>/3.9.6/bin:${PATH}”<br>export PATH<br>alias python=”/usr/local/Cellar/<a href="mailto:&#112;&#x79;&#x74;&#104;&#x6f;&#110;&#64;&#51;&#46;&#57;">&#112;&#x79;&#x74;&#104;&#x6f;&#110;&#64;&#51;&#46;&#57;</a>/3.9.6/Frameworks/Python.framework/Versions/3.9/bin/python3.9”</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure></li>
 </ol>
 
@@ -473,7 +645,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-16 10:16:26" itemprop="dateModified" datetime="2021-08-16T10:16:26+08:00">2021-08-16</time>
+                <time title="Modified: 2021-09-09 14:44:48" itemprop="dateModified" datetime="2021-09-09T14:44:48+08:00">2021-09-09</time>
               </span>
 
           
@@ -747,7 +919,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
