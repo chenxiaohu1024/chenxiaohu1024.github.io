@@ -20,30 +20,35 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Note for Hu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="随笔">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="官网 https:&#x2F;&#x2F;mp.baomidou.com&#x2F;  JPA、tk-mapper、MyBatisPlus 特性 无侵入：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑 损耗小：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作 强大的 CRUD 操作：内置通用 Mapper、通用 Service，仅仅通过少量配置即可实现单表大部分 CRUD 操作，更有强大的条件构造器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatisPlus">
+<meta property="og:url" content="http://example.com/2021/05/24/mybatisplus/index.html">
 <meta property="og:site_name" content="随笔">
-<meta property="og:description" content="Note for Hu">
+<meta property="og:description" content="官网 https:&#x2F;&#x2F;mp.baomidou.com&#x2F;  JPA、tk-mapper、MyBatisPlus 特性 无侵入：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑 损耗小：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作 强大的 CRUD 操作：内置通用 Mapper、通用 Service，仅仅通过少量配置即可实现单表大部分 CRUD 操作，更有强大的条件构造器">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mp.baomidou.com/img/mybatis-plus-framework.jpg">
+<meta property="og:image" content="http://example.com/2021/05/24/mybatisplus/mybatisplus.assets/image-20210525091052561.png">
+<meta property="article:published_time" content="2021-05-24T07:54:44.792Z">
+<meta property="article:modified_time" content="2021-09-07T05:33:10.308Z">
 <meta property="article:author" content="hu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mp.baomidou.com/img/mybatis-plus-framework.jpg">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/05/24/mybatisplus/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>随笔</title>
+  <title>MyBatisPlus | 随笔</title>
   
 
 
@@ -142,351 +147,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hu">
-      <meta itemprop="description" content="Note for Hu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="随笔">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/09/hexo/" class="post-title-link" itemprop="url">Hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-09-09 09:00:35 / Modified: 13:24:35" itemprop="dateCreated datePublished" datetime="2021-09-09T09:00:35+08:00">2021-09-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hu">
-      <meta itemprop="description" content="Note for Hu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="随笔">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/11/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">python环境安装</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-08-11 10:15:27 / Modified: 10:26:41" itemprop="dateCreated datePublished" datetime="2021-08-11T10:15:27+08:00">2021-08-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>mac系统自带python环境，不过都是2.x版本。我们使用mac的brew命令安装python3.9。mac默认python目录/System/Library/Frameworks/Python.framework/Versions, 使用python可以查看当前安装python版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure></li>
-<li><p>安装python<br>安装完成之后使用命令<code>brew install python3</code> 安装最新的python版本，默认会安装到这个目录下/usr/local/Cellar/</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -e .bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>增加环境变量：<br>PATH=”/usr/local/Cellar/<a href="mailto:&#112;&#121;&#x74;&#104;&#111;&#110;&#64;&#51;&#46;&#57;">&#112;&#121;&#x74;&#104;&#111;&#110;&#64;&#51;&#46;&#57;</a>/3.9.6/bin:${PATH}”<br>export PATH<br>alias python=”/usr/local/Cellar/<a href="mailto:&#x70;&#121;&#x74;&#104;&#111;&#x6e;&#x40;&#x33;&#x2e;&#x39;">&#x70;&#121;&#x74;&#104;&#111;&#x6e;&#x40;&#x33;&#x2e;&#x39;</a>/3.9.6/Frameworks/Python.framework/Versions/3.9/bin/python3.9”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/04/mitmproxy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hu">
-      <meta itemprop="description" content="Note for Hu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="随笔">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/04/mitmproxy/" class="post-title-link" itemprop="url">mitmproxy</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-08-04 16:35:50" itemprop="dateCreated datePublished" datetime="2021-08-04T16:35:50+08:00">2021-08-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-11 10:33:08" itemprop="dateModified" datetime="2021-08-11T10:33:08+08:00">2021-08-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>mitmproxy</p>
-<p>安装只收的目录：**/usr/local/Cellar/mitmproxy/**</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/04/%E8%99%9A%E6%8B%9F%E5%B8%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hu">
-      <meta itemprop="description" content="Note for Hu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="随笔">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/04/%E8%99%9A%E6%8B%9F%E5%B8%81/" class="post-title-link" itemprop="url">虚拟币</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-08-04 10:18:21" itemprop="dateCreated datePublished" datetime="2021-08-04T10:18:21+08:00">2021-08-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-11 10:33:08" itemprop="dateModified" datetime="2021-08-11T10:33:08+08:00">2021-08-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="什么是虚拟币"><a href="#什么是虚拟币" class="headerlink" title="什么是虚拟币"></a>什么是虚拟币</h2><ul>
-<li>虚拟币是一种不具备实体形式的、仅以数字形式存在的货币，也称之为”数字货币”。</li>
-<li>其性质与实体货币相似，允许在互联网上即时的、无地理限制转让，主流的数字货币如USDT（泰达币）、BTC（比特币）、ETH（以太坊）等。</li>
-</ul>
-<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ul>
-<li>高度加密：与银行卡等传统交易方式相比，用户不需要给出自己的姓名或卡号即可完成虚拟币交易，避免敏感信息泄露。</li>
-<li>交易快速：虚拟币所采用的区块链技术具有去中心化特点，不需要清算中心机构来处理数据，交易时间大大缩短。</li>
-<li>去中心化：不由央行或当局发行，不受银行监管，用户可随心所欲的使用存放在自己数字钱包里的资金。</li>
-</ul>
-<h2 id="USDT泰达币优势"><a href="#USDT泰达币优势" class="headerlink" title="USDT泰达币优势"></a>USDT泰达币优势</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/07/springboot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hu">
-      <meta itemprop="description" content="Note for Hu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="随笔">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/07/springboot/" class="post-title-link" itemprop="url">spring boot</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-07 08:57:03" itemprop="dateCreated datePublished" datetime="2021-07-07T08:57:03+08:00">2021-07-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-16 10:16:26" itemprop="dateModified" datetime="2021-08-16T10:16:26+08:00">2021-08-16</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/mp/homepage?__biz=Mzg2NTAzMTExNg==&hid=1&sn=3247dca1433a891523d9e4176c90c499">狂神说springboot</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -502,10 +166,9 @@
       <meta itemprop="name" content="随笔">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/24/mybatisplus/" class="post-title-link" itemprop="url">MyBatisPlus</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          MyBatisPlus
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -535,7 +198,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><blockquote>
+        <h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="https://mp.baomidou.com/">https://mp.baomidou.com/</a></p>
 </blockquote>
 <p>JPA、tk-mapper、MyBatisPlus</p>
@@ -650,21 +313,30 @@
 </blockquote>
 <h2 id="MyBatis-Plus-Samples"><a href="#MyBatis-Plus-Samples" class="headerlink" title="MyBatis-Plus Samples"></a>MyBatis-Plus Samples</h2><p><a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus-samples">https://github.com/baomidou/mybatis-plus-samples</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/07/springboot/" rel="next" title="spring boot">
+      spring boot <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -717,6 +389,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text">官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">框架结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="nav-number">4.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CURD%E6%89%A9%E5%B1%95"><span class="nav-number">5.</span> <span class="nav-text">CURD扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85"><span class="nav-number">5.1.</span> <span class="nav-text">自动填充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%90%E8%A7%82%E9%94%81"><span class="nav-number">5.2.</span> <span class="nav-text">乐观锁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">6.</span> <span class="nav-text">分页查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4"><span class="nav-number">7.</span> <span class="nav-text">逻辑删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E6%8F%92%E4%BB%B6"><span class="nav-number">8.</span> <span class="nav-text">性能分析插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">条件构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%99%A8"><span class="nav-number">10.</span> <span class="nav-text">代码自动生成器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF-%E9%85%8D%E7%BD%AEcontroller%E7%94%9F%E6%88%90%E6%A8%A1%E6%9D%BF"><span class="nav-number">11.</span> <span class="nav-text">自定义模板(配置controller生成模板)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E4%B8%BB%E4%BD%93-%E5%BF%85%E7%9C%8B-since-3-4-0"><span class="nav-number"></span> <span class="nav-text">插件主体(必看!)(since 3.4.0)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MyBatis-Plus-Samples"><span class="nav-number">1.</span> <span class="nav-text">MyBatis-Plus Samples</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
