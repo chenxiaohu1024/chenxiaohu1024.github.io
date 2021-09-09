@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-09-09 09:00:35 / Modified: 13:24:35" itemprop="dateCreated datePublished" datetime="2021-09-09T09:00:35+08:00">2021-09-09</time>
+              <time title="Created: 2021-09-09 09:00:35 / Modified: 13:40:23" itemprop="dateCreated datePublished" datetime="2021-09-09T09:00:35+08:00">2021-09-09</time>
             </span>
 
           
@@ -200,6 +200,21 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="hexo安装-node-git-hexo"><a href="#hexo安装-node-git-hexo" class="headerlink" title="hexo安装 (node,git,hexo )"></a>hexo安装 (node,git,hexo )</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --verison</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v   </span><br></pre></td></tr></table></figure>
+
+<h2 id="github生成ssh："><a href="#github生成ssh：" class="headerlink" title="github生成ssh："></a>github生成ssh：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮件地址&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成好之后在   **Users/xh/.ssh/id_rsa.pub **，将该文件的内容拷贝到github中，settings -&gt; SSH keys</p>
+<p>测试ssh是否绑定成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com </span><br></pre></td></tr></table></figure>
+
+<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo <span class="comment">#安装hexo</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s <span class="comment"># 启动服务</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/chenxiaohu1024/chenxiaohu1024.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="github上新建token-即为以后的密码"><a href="#github上新建token-即为以后的密码" class="headerlink" title="github上新建token,   即为以后的密码"></a>github上新建token,   即为以后的密码</h2><p>settings -&gt; Developer settings -&gt; Personal access tokens</p>
 
       
     </div>
